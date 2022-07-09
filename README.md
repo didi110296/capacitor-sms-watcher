@@ -1,20 +1,33 @@
-# capacitor-sms-watcher
+# @laravelka/csw
 
-sms watcher
+The plugin is designed to listen to incoming SMS messages
 
 ## Install
 
 ```bash
-npm install capacitor-sms-watcher
+npm install @laravelka/csw
 npx cap sync
 ```
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`watch()`](#watch)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### watch()
+
+```typescript
+watch() => Promise<{ from: string; body: string; }>
+```
+
+**Returns:** <code>Promise&lt;{ from: string; body: string; }&gt;</code>
+
+--------------------
+
 </docgen-api>
-"# capacitor-sms-watcher" 
