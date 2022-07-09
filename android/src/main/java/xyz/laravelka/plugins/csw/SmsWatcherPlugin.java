@@ -8,15 +8,23 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "SmsWatcher")
 public class SmsWatcherPlugin extends Plugin {
+    // private SmsWatcher implementation = new SmsWatcher();
 
-    private SmsWatcher implementation = new SmsWatcher();
+    private SmsMonitor smsMonitor;
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void watch(PluginCall call) {
+        // String value = call.getString("value");
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        smsMonitor = new smsMonitor() {
+            @Override
+            protected void onNewSms(from, body) {
+                Log.i("message", from + ": " + body);
+                JSObject ret = new JSObject();
+                ret.put("from", from);
+                ret.put("body", body);
+                call.resolve(ret);
+            }
+        };
     }
 }

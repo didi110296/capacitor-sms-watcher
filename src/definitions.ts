@@ -1,3 +1,3 @@
 export interface SmsWatcherPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  watch(options: { value: string }): Promise<{ from: string, body: string }>;
 }
