@@ -1,11 +1,11 @@
-# @laravelka/csw
+# capacitor-sms-watcher-fork
 
-The plugin is designed to listen to incoming SMS messages
+The plugin is designed to listen to incoming SMS messages - forked from @laravelka/csw - now work with capacitor 5+
 
 ## Install
 
 ```bash
-npm install @laravelka/csw
+npm install capacitor-sms-watcher-fork
 npx cap sync
 ```
 
