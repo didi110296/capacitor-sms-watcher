@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.telephony.SmsMessage;
 import android.util.Log;
 
-public class SMSMonitor extends BroadcastReceiver {
+public class SmsMonitor extends BroadcastReceiver {
 
     private static final String ACTION = "android.provider.Telephony.SMS_RECEIVED";
 

@@ -11,14 +11,14 @@ public class SmsWatcherPlugin extends Plugin {
 
     // private SmsWatcher implementation = new SmsWatcher();
 
-    private SMSMonitor smsMonitor;
+    private SmsMonitor smsMonitor;
 
     @PluginMethod
     public void watch(PluginCall call) {
         // String value = call.getString("value");
 
         smsMonitor =
-            new SMSMonitor() {
+            new SmsMonitor() {
                 @Override
                 protected void onNewSms(String from, String body) {
                     JSObject ret = new JSObject();
