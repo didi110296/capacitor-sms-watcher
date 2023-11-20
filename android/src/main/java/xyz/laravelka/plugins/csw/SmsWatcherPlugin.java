@@ -7,7 +7,7 @@ import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "SmsWatcher")
-public abstract class SmsWatcherPlugin extends Plugin {
+public class SmsWatcherPlugin extends Plugin {
 
     // private SmsWatcher implementation = new SmsWatcher();
 
